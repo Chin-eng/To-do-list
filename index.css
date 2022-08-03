@@ -1,0 +1,27 @@
+input {
+   background-color: aquamarine;
+}
+
+button {
+
+}
+
+p {
+    margin-top: 25px ;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+body {
+    text-align: center;
+}
+
+.box{
+    width: 600px;
+    height: 165px;
+    padding-top: none;
+    border: 1px solid black;
+    margin-left: 35ch;
+    border-width: 3px;
+    border-radius: 1cm;
+}
