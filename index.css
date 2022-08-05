@@ -2,10 +2,6 @@ input {
    background-color: aquamarine;
 }
 
-button {
-
-}
-
 p {
     margin-top: 25px ;
     font-weight: bold;
@@ -24,4 +20,17 @@ body {
     margin-left: 35ch;
     border-width: 3px;
     border-radius: 1cm;
+}
+
+ul {
+    margin-top: 50px;
+}
+
+li {
+    margin-top: 5px;;
+}
+
+#done-btn {
+    background-color:  #FFFFFF;
+    color: black;
 }
