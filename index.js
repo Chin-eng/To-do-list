@@ -6,6 +6,13 @@ const inputEl = document.getElementById("input-btn");
 const olEl =  document.getElementById("ol-el");
 const doneBtn =  document.getElementById("done-btn");
 
+const leadFromLocalStorage = JSON.parse(localStorage.getItem("myList"))
+
+if (leadFromLocalStorage) {  
+    myList = leadFromLocalStorage;
+    render(myList);
+}
+
 function render(leads) {
     let listItems = " ";
     for ( let i = 0; i < leads.length; i++) {
@@ -21,6 +28,7 @@ function render(leads) {
 submitBtn.addEventListener("click", function() {
     myList.push(inputEl.value);
     inputEl.value = " ";
+    localStorage.setItem("myList", JSON.stringify(myList))
     render(myList);
 })
 
@@ -30,12 +38,6 @@ clearListBtn.addEventListener("click", function() {
 })
 
 function deleteButton(index) {
-    myList.splice(index, 1); // deletes one item starting from 'index'
+    myList.splice(index, 1); 
     render(myList);
 }
-
-
-
-
-
-
