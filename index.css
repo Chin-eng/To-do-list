@@ -22,15 +22,21 @@ body {
     border-radius: 1cm;
 }
 
-ul {
+ol {
     margin-top: 50px;
+    margin-right: 40px;
+    text-align: center;
+    list-style-position: inside;
 }
 
 li {
-    margin-top: 5px;;
+    margin-top: 5px;
 }
 
 #done-btn {
     background-color:  #FFFFFF;
     color: black;
+    width: 18px;
+    height: 19px;
+    padding-right: 15px;
 }
