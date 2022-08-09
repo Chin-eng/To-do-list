@@ -16,7 +16,7 @@ if (leadFromLocalStorage) {
 function render(leads) {
     let listItems = " ";
     for ( let i = 0; i < leads.length; i++) {
-        listItems +=  
+        listItems +=                                            
             `<li id = " ">
                 ${leads[i]} <button id= "done-btn" onclick = "deleteButton(${i})">X</button>
             </li>
@@ -33,11 +33,13 @@ submitBtn.addEventListener("click", function() {
 })
 
 clearListBtn.addEventListener("click", function() {
+    localStorage.clear();
     myList = [];
     render(myList)
 })
 
 function deleteButton(index) {
-    myList.splice(index, 1); 
+    myList.splice(index, 1);
+    localStorage.setItem("myList", JSON.stringify(myList));
     render(myList);
 }
